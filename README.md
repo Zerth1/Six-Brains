@@ -1,3 +1,3 @@
 # Six-Eyes
 
-![image](https://github.com/user-attachments/assets/b4a91cc7-a95a-4f94-991d-e8a70ca4627e)
+![converted_image](https://github.com/user-attachments/assets/b77969a7-f689-4d01-b990-4f5cd42c661c)
