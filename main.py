@@ -413,6 +413,8 @@ while not window_should_close():
                         if is_mouse_button_pressed(MouseButton.MOUSE_BUTTON_LEFT): 
                             if check_collision_point_rec(current_position, Rectangle(100 + (x_offset_index * 200) + 100, 50 + ((i % 10) * 50), 25, 25)):
                                 settings_data["EnabledCharacterEncodings"][encoding] = not settings_data["EnabledCharacterEncodings"][encoding]
+                                with open("settings_data.json", "w") as file:
+                                    json.dump(settings_data, file)
                         if settings_data["EnabledCharacterEncodings"][encoding]:
                             draw_rectangle(100 + (x_offset_index * 200) + 100, 50 + ((i % 10) * 50), 25, 25, GREEN)
                         else:
@@ -426,11 +428,12 @@ while not window_should_close():
                         if is_mouse_button_pressed(MouseButton.MOUSE_BUTTON_LEFT): 
                             if check_collision_point_rec(current_position, Rectangle(100 + (x_offset_index * 200) + 25 + measure_text(encoding + ":", 25), 50 + ((i % 20) * 25), 12, 12)):
                                 settings_data["EnabledSoundEncodings"][encoding] = not settings_data["EnabledSoundEncodings"][encoding]
+                                with open("settings_data.json", "w") as file:
+                                    json.dump(settings_data, file)
                         if settings_data["EnabledSoundEncodings"][encoding]:
                             draw_rectangle(100 + (x_offset_index * 200) + 25 + measure_text(encoding + ":", 25), 50 + ((i % 20) * 25), 12, 12, GREEN)
                         else:
                             draw_rectangle(100 + (x_offset_index * 200) + 25 + measure_text(encoding + ":", 25), 50 + ((i % 20) * 25), 12, 12, RED)
-                    pass    
             else:
                 draw_text("Grapheme-Color", 50, 30, 25, WHITE)
                 draw_text("Chromesthesia", 50, 80, 25, WHITE)
