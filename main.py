@@ -215,7 +215,6 @@ while not window_should_close():
                         key_copies.remove(grapheme_objects[i - settings_data["Grapheme-Color"]["N"]])
                         symbol_objects.append(random.choice(key_copies))
                     grapheme_objects.append(random.choice(valid_key_copies))
-            print(trial_match)
         elif chosen_gamemode == "Chromesthesia":
             trials = max(20, settings_data[chosen_gamemode]["N"] * 10)
         trial_clock = get_time() + settings_data["TimerDuration"]
